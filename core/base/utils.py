@@ -61,4 +61,11 @@ def plot_goHistorical(xl,yl,namel, xp,yp,namep, list_top):
                             dict(label='Ultimos 12 Meses' , step='all')
                     ])
             ))
+#     fig.update_layout(
+#         plot_bgcolor='#111111',
+#         paper_bgcolor= '#111111',
+#         font_color='#cee3e1',
+#         xaxis=dict(showgrid=False,showline=True,linecolor='rgb(255,255,255)'),
+#         yaxis=dict(showgrid=False),
+# )
     return fig
