@@ -6,7 +6,7 @@ import pandas as pd
 
 # engine = get_connection()
 # df = pd.read_sql('datablue',con=engine)                
-df = pd.read_csv("report/dolarblue.csv")
+df = pd.read_csv("data/dolarblue.csv")
 # colors = {
 #     'background_box': '#111111',
 #     'background_body': '#383636',

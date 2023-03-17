@@ -36,7 +36,7 @@ def data_transform(datos):
 
     #Reemplazamos los valores nulos
     df.fillna({'event':'ninguno', 'event_type':'ninguno'}, inplace=True)
-    data_cleaning(df,'usd_offical')
+    data_cleaning(df,'usd_official')
     data_cleaning(df,'international_reserves')
 
     df['d'] = pd.to_datetime(df['d'])

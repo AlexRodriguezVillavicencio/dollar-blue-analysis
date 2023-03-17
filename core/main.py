@@ -12,11 +12,14 @@ def update_db():
     data = ['usd','usd_of','reservas','milestones','inflacion_interanual_oficial']
     header = {
         "Content-Type": "application/json",
-        'Authorization': TOKEN
+        'Authorization': f'Bearer {TOKEN}'
         }
     datos = etl.get_data(url,data,header)
     df = etl.data_transform(datos)
-    etl.load_db(df,get_connection(),'datablue')
+    # guardando los datos en un csv
+    df.to_csv("data/dolarblue.csv", index=False, encoding='utf-8')
+    #guardando los datos en una base de datos
+    #etl.load_db(df,get_connection(),'datablue')
 
 def blue_vs_official(df):
     df = df[-405:]
